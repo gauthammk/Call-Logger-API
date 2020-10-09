@@ -1,7 +1,14 @@
 from flask import Flask
+from prediction import preprocessing
 app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World! (From the Samsung Worklet group.)'
+def index():
+    return 'Hello, world!'
+
+
+@app.route('/prediction')
+def prediction():
+    result = preprocessing('sample_calls.csv', 'sample_SMS.csv')
+    return result
