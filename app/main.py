@@ -1,5 +1,5 @@
 from flask import Flask
-from prediction import preprocessing
+# from prediction import preprocessing
 app = Flask(__name__)
 
 
@@ -8,7 +8,7 @@ def index():
     return 'Hello, world!'
 
 
-@app.route('/prediction')
-def prediction():
-    result = preprocessing('sample_calls.csv', 'sample_SMS.csv')
-    return result
+# @app.route('/prediction')
+# def prediction():
+#     result = preprocessing('sample_calls.csv', 'sample_SMS.csv')
+#     return result
