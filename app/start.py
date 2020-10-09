@@ -1,5 +1,5 @@
 from flask import Flask
-from test import testFunction
+from .test import testFunction
 # from prediction import preprocessing
 app = Flask(__name__)
 
